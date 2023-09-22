@@ -1,16 +1,25 @@
 # ewa
 
-A new Flutter project.
+## Platform promoting good E-Waste disposal practices  
 
-## Getting Started
+### Learn  
 
-This project is a starting point for a Flutter application.
+Get Informative articles, vlogs on e-waste disposal.  
+Find the location of nearby E-Waste disposal centers. 
+Ask our chatbot, any quries related to E-waste disposal.  
+Check with our platform before buying electronic devices for their durability to help reduce E-Waste.  
 
-A few resources to get you started if this is your first Flutter project:
+### Create  
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Create Informative content on E-waste management to get exciting rewards.  
+Write blogs, or create short form videos to reach your audience.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Help
+
+You can help the community by opting in for relay program.  
+Relay users from remote areas collect E-Waste from people in the area and periodically visit disposal centers to dispose of the collected E-Waste.  
+Relay users earn extra rewards.  
+
+### Rewards
+
+Earn rewards for amount of valuable metals extracted from correctly disposed of electronic devices.
