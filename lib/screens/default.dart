@@ -1,5 +1,6 @@
 import 'package:ewa/screens/blog.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_swipe_detector/flutter_swipe_detector.dart';
 import '../widgets/drawer.dart' as side_drawer;
 import 'home.dart';
 
@@ -62,7 +63,7 @@ class _DefaultState extends State<Default> {
               },
           showSelectedLabels: false,
           showUnselectedLabels: false,
-          backgroundColor: Colors.green,
+          backgroundColor: Theme.of(context).primaryColor,
           type: BottomNavigationBarType.fixed,
           selectedIconTheme: const IconThemeData(color: Colors.white, size: 28),
           unselectedIconTheme:
@@ -89,13 +90,46 @@ class _DefaultState extends State<Default> {
               label: "profile",
             ),
           ]),
-      body: switch (screen){
-       Screen.home => Home(size: size,),
-       Screen.articles=> Blogs(),
-       Screen.bits=> Container(),
-       Screen.leaderboard=> Container(),
-       Screen.profile=> Container(),
-      },
+      body: SizedBox.expand(
+        
+        child: GestureDetector(
+          onHorizontalDragEnd: (details) {
+            if(details.primaryVelocity! < 0) {
+            print("left");
+            setState(() {
+              screen = switch (screen) {
+                Screen.profile => Screen.home,
+                Screen.home => Screen.articles,
+                Screen.articles => Screen.bits,
+                Screen.bits => Screen.leaderboard,
+                Screen.leaderboard => Screen.profile,
+              };
+            });
+          }
+          if(details.primaryVelocity! > 0) {
+            print("right");
+            setState(() {
+              screen = switch (screen) {
+                Screen.home => Screen.profile,
+                Screen.articles => Screen.home,
+                Screen.bits => Screen.articles,
+                Screen.leaderboard => Screen.bits,
+                Screen.profile => Screen.leaderboard,
+              };
+            });
+          }
+          },
+          child: switch (screen) {
+            Screen.home => Home(
+                size: size,
+              ),
+            Screen.articles => Blogs(),
+            Screen.bits => Container(child: Text("vlogs"),),
+            Screen.leaderboard => Container(child: Text("leaderboard"),),
+            Screen.profile => Container(child: Text("profile"),),
+          },
+        ),
+      ),
     );
   }
 }

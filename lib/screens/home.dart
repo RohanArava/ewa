@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class Home extends StatelessWidget {
   const Home({
     super.key,
@@ -17,18 +16,29 @@ class Home extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Container(
-            width: size.width * 0.6,
+            width: size.width * 0.8,
             height: size.width * 0.4,
             margin: EdgeInsets.all(size.width * 0.02),
             child: Card(
               child: InkWell(
                 borderRadius: const BorderRadius.all(Radius.circular(10)),
                 onTap: () => {},
-                child: Column(
+                child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Icon(Icons.location_on, size: size.width * 0.2),
-                    const Text("Locate Nearby Disposal Centers")
+                    SizedBox(
+                      child: Image.asset(
+                        "assets/placeholder.png",
+                      ),
+                      width: size.width * 0.2,
+                      height: size.width * 0.2,
+                    ),
+                    const Flexible(
+                        child: Text(
+                      "Locate Nearby Disposal Centers",
+                      style: TextStyle(fontSize: 24.0),
+                    ))
                   ],
                 ),
               ),
