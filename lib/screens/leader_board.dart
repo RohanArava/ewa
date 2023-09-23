@@ -7,6 +7,25 @@ class leaderboard extends StatelessWidget {
   });
 
   final Size size;
+  Widget Cards(String s1, String s2, String s3) {
+    return Card(
+      child: ListTile(
+        leading: Text(
+          s1,
+          style: TextStyle(
+              fontSize: 20, color: Colors.green, fontWeight: FontWeight.bold),
+        ),
+        title: Text(
+          s2,
+          style: TextStyle(fontSize: 20),
+        ),
+        trailing: Text(
+          s3,
+          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+        ),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -78,105 +97,22 @@ class leaderboard extends StatelessWidget {
             ),
           ),
         ),
-        SingleChildScrollView(
-          child: Column(
-            children: [
-              Card(
-                child: ListTile(
-                  leading: Text(
-                    '1',
-                    style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.green,
-                        fontWeight: FontWeight.bold),
-                  ),
-                  title: Text(
-                    'Markzuckenberg',
-                    style: TextStyle(fontSize: 20),
-                  ),
-                  trailing: Text(
-                    '20000',
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                  ),
-                ),
-              ),
-              Card(
-                child: ListTile(
-                  leading: Text(
-                    '2',
-                    style: TextStyle(
-                        fontSize: 20,
-                        color: Theme.of(context).primaryColor,
-                        fontWeight: FontWeight.bold),
-                  ),
-                  title: Text(
-                    'Sanath',
-                    style: TextStyle(fontSize: 20),
-                  ),
-                  trailing: Text(
-                    '₹ 18000',
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                  ),
-                ),
-              ),
-              Card(
-                child: ListTile(
-                  leading: Text(
-                    '3',
-                    style: TextStyle(
-                        fontSize: 20,
-                        color: Theme.of(context).primaryColor,
-                        fontWeight: FontWeight.bold),
-                  ),
-                  title: Text(
-                    'Sofia',
-                    style: TextStyle(fontSize: 20),
-                  ),
-                  trailing: Text(
-                    '₹ 15000',
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                  ),
-                ),
-              ),
-              Card(
-                child: ListTile(
-                  leading: Text(
-                    '4',
-                    style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.green,
-                        fontWeight: FontWeight.bold),
-                  ),
-                  title: Text(
-                    'Senju',
-                    style: TextStyle(fontSize: 20),
-                  ),
-                  trailing: Text(
-                    '₹ 12000',
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                  ),
-                ),
-              ),
-              Card(
-                child: ListTile(
-                  leading: Text(
-                    '5',
-                    style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.green,
-                        fontWeight: FontWeight.bold),
-                  ),
-                  title: Text(
-                    'steve jobs',
-                    style: TextStyle(fontSize: 20),
-                  ),
-                  trailing: Text(
-                    '₹ 2000',
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                  ),
-                ),
-              )
-            ],
+        Expanded(
+          child: SingleChildScrollView(
+            scrollDirection: Axis.vertical,
+            child: Column(
+              children: [
+                Cards('1', 'Markzukenberg', '₹ 20000'),
+                Cards('2', 'Julia', '₹ 18000'),
+                Cards('3', 'Sofia', '₹ 12000'),
+                Cards('4', 'Senju', '₹ 10000'),
+                Cards('5', 'Steve Jobs', '₹ 1000'),
+                Cards('5', 'Steve Jobs', '₹ 1000'),
+                Cards('5', 'Steve Jobs', '₹ 1000'),
+                Cards('5', 'Steve Jobs', '₹ 1000'),
+                Cards('5', 'Steve Jobs', '₹ 1000'),
+              ],
+            ),
           ),
         )
       ]),
