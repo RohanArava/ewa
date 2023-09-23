@@ -2,6 +2,7 @@ import 'package:ewa/screens/blog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_swipe_detector/flutter_swipe_detector.dart';
 import '../widgets/drawer.dart' as side_drawer;
+import 'chunks.dart';
 import 'home.dart';
 
 enum Screen { home, articles, bits, leaderboard, profile }
@@ -124,7 +125,7 @@ class _DefaultState extends State<Default> {
                 size: size,
               ),
             Screen.articles => Blogs(),
-            Screen.bits => Container(child: Text("vlogs"),),
+            Screen.bits => Chunks(size:size),
             Screen.leaderboard => Container(child: Text("leaderboard"),),
             Screen.profile => Container(child: Text("profile"),),
           },
