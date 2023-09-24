@@ -13,15 +13,18 @@ class leaderboard extends StatelessWidget {
         leading: Text(
           s1,
           style: TextStyle(
-              fontSize: 20, color: Colors.green, fontWeight: FontWeight.bold),
+              fontSize: size.width * 0.05,
+              color: Colors.green,
+              fontWeight: FontWeight.bold),
         ),
         title: Text(
           s2,
-          style: TextStyle(fontSize: 20),
+          style: TextStyle(fontSize: size.width * 0.05),
         ),
         trailing: Text(
           s3,
-          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          style: TextStyle(
+              fontSize: size.width * 0.05, fontWeight: FontWeight.bold),
         ),
       ),
     );
@@ -48,10 +51,10 @@ class leaderboard extends StatelessWidget {
         Container(
           height: size.height * 0.09,
           width: size.width,
-          padding: EdgeInsets.all(2),
+          padding: EdgeInsets.all(size.height * 0.003),
           decoration: BoxDecoration(
             color: Colors.white,
-            borderRadius: BorderRadius.circular(20.0),
+            borderRadius: BorderRadius.circular(size.width * 0.06),
             // gradient: LinearGradient(colors: [
             //   Colors.yellow.shade600,
             //   Colors.orange,
@@ -64,15 +67,16 @@ class leaderboard extends StatelessWidget {
                 side: BorderSide(
                   color: Theme.of(context).colorScheme.outline,
                 ),
-                borderRadius: const BorderRadius.all(Radius.circular(12)),
+                borderRadius:
+                    BorderRadius.all(Radius.circular(size.width * 0.04)),
               ),
               color: Theme.of(context).primaryColor,
               child: Padding(
                 padding: EdgeInsets.only(
                     top: size.height * 0.01,
-                    right: size.width * 0.02,
-                    left: size.width * 0.02,
-                    bottom: size.width * 0.01),
+                    right: size.width * 0.024,
+                    left: size.width * 0.024,
+                    bottom: size.width * 0.018),
                 child: InkWell(
                   onTap: () {},
                   child: Text('7 days',
