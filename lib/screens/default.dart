@@ -124,7 +124,9 @@ class _DefaultState extends State<Default> {
             Screen.home => Home(
                 size: size,
               ),
-            Screen.articles => Blogs(),
+            Screen.articles => Blogs(
+                size: size,
+              ),
             Screen.bits => Chunks(size: size),
             Screen.leaderboard => leaderboard(size: size),
             Screen.profile => Container(

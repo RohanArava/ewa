@@ -41,6 +41,7 @@ dependencies:
   latlong2: ^0.8.2
   dio: ^4.0.6
   video_player: ^2.7.2
+  http: ^0.13.6
 
 dev_dependencies:
   flutter_test:
@@ -71,6 +72,10 @@ flutter:
     - assets/videos/v2.mp4
     - assets/videos/v3.mp4
     - assets/videos/v4.mp4
+    - assets/blog_images/b1.jpg
+    - assets/blog_images/b2.jpg
+    - assets/blog_images/b3.jpg
+    - assets/blog_images/b4.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
