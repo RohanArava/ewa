@@ -30,7 +30,7 @@ class leaderboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(4),
+      padding: EdgeInsets.all(size.width * 0.009),
       child: Column(children: [
         Card(
           color: Colors.white,
@@ -68,8 +68,11 @@ class leaderboard extends StatelessWidget {
               ),
               color: Theme.of(context).primaryColor,
               child: Padding(
-                padding:
-                    EdgeInsets.only(top: 10, right: 12, left: 12, bottom: 10),
+                padding: EdgeInsets.only(
+                    top: size.height * 0.01,
+                    right: size.width * 0.02,
+                    left: size.width * 0.02,
+                    bottom: size.width * 0.01),
                 child: InkWell(
                   onTap: () {},
                   child: Text('7 days',

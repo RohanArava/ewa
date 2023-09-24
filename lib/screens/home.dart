@@ -1,3 +1,4 @@
+import 'package:ewa/screens/locator.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
@@ -22,7 +23,9 @@ class Home extends StatelessWidget {
             child: Card(
               child: InkWell(
                 borderRadius: const BorderRadius.all(Radius.circular(10)),
-                onTap: () => {},
+                onTap: () => {
+                  Navigator.of(context).pushNamed(Locator.route)
+                },
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   crossAxisAlignment: CrossAxisAlignment.center,
